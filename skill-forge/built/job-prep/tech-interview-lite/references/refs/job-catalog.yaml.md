@@ -1,0 +1,111 @@
+# MD 兼容视图 — `job-catalog.yaml`
+
+> **权威源文件**：同目录 `job-catalog.yaml`（本文件由 `skill-core` 自动生成，请勿手改；改源文件后重新 `batch build` 或运行 compat 同步。）
+
+| 项 | 值 |
+|----|-----|
+| 类型 | `yaml` |
+| 路径 | `refs/job-catalog.yaml` |
+| 用途 | 求职路由 catalog。 |
+
+## 内容
+
+```yaml
+version: "1.0"
+
+majors:
+  - id: cs
+    aliases: [计算机, 软件工程, 计科, CS, 人工智能, 数据科学]
+  - id: business
+    aliases: [工商管理, 市场营销, 电商, 金融, 经管, MBA]
+  - id: general
+    aliases: [不限, 跨专业, 文科, 工科]
+
+jobs:
+  - id: internet-product
+    title: 互联网产品 / PM
+    status: ready
+    majors: [business, cs, general]
+    match_keywords:
+      - 互联网产品
+      - 产品经理
+      - PM
+      - 产品实习
+      - 用户研究
+      - 需求文档
+      - PRD
+      - UX
+    skills_to_install:
+      - name: resume-tailor
+        scope: project
+      - name: behavioral-interview
+        scope: project
+    workspace_subdir: product-prep
+    deliverables:
+      -  tailored 简历要点 (job/resume-tailored.md)
+      - STAR 行为面模拟题清单
+      - 投递 checklist
+
+  - id: java-backend
+    title: Java 后端开发
+    status: ready
+    majors: [cs]
+    match_keywords:
+      - java
+      - 后端
+      - spring
+      - springboot
+      - 微服务
+      - mysql
+      - redis
+      - 分布式
+    skills_to_install:
+      - name: resume-tailor
+        scope: project
+      - name: tech-interview-lite
+        scope: project
+    workspace_subdir: java-backend-prep
+    deliverables:
+      - 简历项目 bullet 对齐 JD
+      - 技术八股/算法 lite 模拟题
+      - 系统设计简答提纲
+
+  - id: state-owned-comprehensive
+    title: 国企 / 综测 / 结构化面试
+    status: ready
+    majors: [general, business, cs]
+    match_keywords:
+      - 国企
+      - 综测
+      - 结构化面试
+      - 半结构化
+      - 公务员
+      - 央企
+      - 行测
+      - 无领导小组
+    skills_to_install:
+      - name: behavioral-interview
+        scope: project
+      - name: resume-tailor
+        scope: project
+    workspace_subdir: soe-prep
+    deliverables:
+      - 综测/结构化 STAR 回答提纲
+      - 简历政治面貌与经历合规检查清单
+      - 模拟题清单 (mock-questions.md)
+
+matching:
+  min_score: 2
+  tie_threshold: 1
+  keyword_weight: 2
+  major_weight: 3
+
+install:
+  default_host: cursor
+  default_scope: project
+  cli_template: "python skill-core/skill.py install {skill} --host {host} --scope {scope} --project {project_dir} --force"
+  resolve_order:
+    - registry
+    - examples/{skill}
+    - skill-forge/built/job-prep/{skill}
+```

@@ -1,0 +1,17 @@
+# session.yaml 字段
+
+```yaml
+version: "1.0"
+major: cs
+target_job: internet-product
+matched_job_id: internet-product
+skills_installed:
+  - resume-tailor
+  - behavioral-interview
+project_dir: .
+host: cursor
+scope: project
+jd_summary: ""
+ethics_ack: true
+created_at: ISO8601
+```

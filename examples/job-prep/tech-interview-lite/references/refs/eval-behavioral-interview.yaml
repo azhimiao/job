@@ -1,0 +1,21 @@
+tests:
+  - id: T1
+    description: behavioral workflow
+    assert:
+      contains: ["star-framework", "STAR", "behavioral-prep.md"]
+      sections: ["Quick Start", "Workflow", "Failure Modes"]
+
+  - id: T2
+    description: mock outputs
+    assert:
+      contains: ["mock-questions.md", "mock-feedback.md", "state-owned-comprehensive"]
+
+  - id: T3
+    description: ethics
+    assert:
+      contains: ["fake STAR", "refuse ethics"]
+
+  - id: T4
+    description: deps
+    assert:
+      contains: ["job-prep-assistant", "prep_task"]

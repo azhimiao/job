@@ -1,0 +1,21 @@
+tests:
+  - id: T1
+    description: tech interview workflow
+    assert:
+      contains: ["tech-interview-guide", "java-backend", "mock-questions.md"]
+      sections: ["Quick Start", "Workflow", "Failure Modes"]
+
+  - id: T2
+    description: topics
+    assert:
+      contains: ["Spring", "MySQL", "algorithm", "tech-prep.md"]
+
+  - id: T3
+    description: integrity
+    assert:
+      contains: ["OA cheat", "guaranteed pass", "refuse"]
+
+  - id: T4
+    description: deps
+    assert:
+      contains: ["job-prep-assistant", "prep_task"]

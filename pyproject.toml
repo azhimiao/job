@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-prep-skills"
+version = "1.0.0"
+description = "Agent Skills for job preparation: resume tailoring, behavioral and technical interview prep"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+keywords = ["agent-skills", "cursor", "job-prep", "resume", "interview", "STAR"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/azhimiao/job"
+Repository = "https://github.com/azhimiao/job"
+
+[project.scripts]
+skill = "skill_core_cli:main"
+
+[tool.setuptools]
+py-modules = ["skill_core_cli"]

@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-06-15T00:00:00+00:00",
+  "skills": [
+    {
+      "name": "skill-core",
+      "version": "2.0.0",
+      "description": "Skill Protocol v2 compiler and meta-skill for building Agent Skills at scale.",
+      "path": "skill-core",
+      "status": "stable",
+      "tags": ["meta", "scripts"]
+    },
+    {
+      "name": "job-prep-assistant",
+      "version": "1.0.0",
+      "description": "Route job preparation: major + target role → score job-catalog, confirm, auto-install resume-tailor / behavioral-interview / tech-interview-lite.",
+      "path": "examples/job-prep/job-prep-assistant",
+      "status": "stable",
+      "tags": ["example", "theme:job-prep", "review"]
+    },
+    {
+      "name": "resume-tailor",
+      "version": "1.0.0",
+      "description": "Parse job description, map requirements to real experience, produce tailored resume bullets — no fabrication.",
+      "path": "examples/job-prep/resume-tailor",
+      "status": "stable",
+      "tags": ["example", "theme:job-prep"]
+    },
+    {
+      "name": "behavioral-interview",
+      "version": "1.0.0",
+      "description": "STAR behavioral interview prep: story bank, mock Q&A, feedback rubric.",
+      "path": "examples/job-prep/behavioral-interview",
+      "status": "stable",
+      "tags": ["example", "theme:job-prep"]
+    },
+    {
+      "name": "tech-interview-lite",
+      "version": "1.0.0",
+      "description": "Lite technical interview prep: JD-aligned fundamentals, algorithm drills, mock questions.",
+      "path": "examples/job-prep/tech-interview-lite",
+      "status": "stable",
+      "tags": ["example", "theme:job-prep"]
+    }
+  ]
+}

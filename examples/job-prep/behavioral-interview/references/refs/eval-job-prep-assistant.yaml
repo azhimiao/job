@@ -1,0 +1,21 @@
+tests:
+  - id: T1
+    description: job prep router
+    assert:
+      contains: ["job-catalog.yaml", "resume-tailor", "session.yaml"]
+      sections: ["Quick Start", "Workflow", "Failure Modes"]
+
+  - id: T2
+    description: confirm install
+    assert:
+      contains: ["confirm", "install", "resolve_order", "job-prep"]
+
+  - id: T3
+    description: prep skills list
+    assert:
+      contains: ["behavioral-interview", "tech-interview-lite", "no offer guarantee", "internet-product"]
+
+  - id: T4
+    description: handoff checklist
+    assert:
+      contains: ["HANDOFF", "application-checklist.md", "block install"]
